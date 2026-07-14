@@ -80,9 +80,23 @@ margin:20px 0;
 ">
 <p>Bu sayfa sadece senin için hazırlandı...</p>
 
-<button onclick="alert('Sadece seni seviyorum. Kalbimde başka kimse yok. Bunu söylememe bile gerek yok çünkü gerçekten seni hâlâ çok seviyorum. ❤️')">
+<button onclick="document.getElementById('mektup').style.display='block'">
 💌 Mektubu Aç
 </button>
+
+<div id="mektup" style="display:none; margin-top:20px; background:#fff0f5; padding:20px; border-radius:20px; box-shadow:0 0 15px rgba(255,105,180,.4);">
+
+<h2>💌 Sana Mektubum</h2>
+
+<p>
+Sadece seni seviyorum.<br><br>
+
+Kalbimde başka kimse yok.<br><br>
+
+Bunu söylememe bile gerek yok çünkü gerçekten seni hâlâ çok seviyorum. ❤️
+</p>
+
+</div>
 
 </button>
 
