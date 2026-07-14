@@ -59,10 +59,72 @@ transition:.3s;
 button:hover{
 transform:scale(1.05);
 }
+  .galeri{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.galeri img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:15px;
+    border:3px solid #ff69b4;
+    box-shadow:0 0 15px rgba(255,105,180,0.5);
+    transition:0.3s;
+}
+
+.galeri img:hover{
+    transform:scale(1.08);
+}
+
+footer{
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    color:#ff4d88;
+    font-size:20px;
+}
+  .kalp{
+    position:fixed;
+    top:-30px;
+    font-size:22px;
+    animation:kalpdus 6s linear;
+    pointer-events:none;
+    z-index:9999;
+}
+
+@keyframes kalpdus{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(110vh);
+    }
+}
 </style>
 
 </head>
+<script>
+setInterval(function(){
 
+    const kalp = document.createElement("div");
+
+    kalp.className = "kalp";
+    kalp.innerHTML = "❤️";
+    kalp.style.left = Math.random() * 100 + "vw";
+
+    document.body.appendChild(kalp);
+
+    setTimeout(function(){
+        kalp.remove();
+    }, 6000);
+
+}, 700);
+</script>
 <body>
 
 <div class="card">
@@ -95,9 +157,27 @@ Kalbimde başka kimse yok.<br><br>
 </p>
 
 </div>
+</div>
+</div>
 
-</button>
+<button onclick="surpriz()">🎁 Bana Tıkla</button>
 
+<h2>📸 Anılarımız</h2>
+
+<div class="galeri">
+    ...
+</div>
+<h2>📸 Anılarımız</h2>
+<div class="galeri">
+    <img src="foto1.jpg" alt="Fotoğraf 1">
+    <img src="foto2.jpg" alt="Fotoğraf 2">
+    <img src="foto3.jpg" alt="Fotoğraf 3">
+</div>
+<footer>
+    ❤️ Sonsuza Kadar ❤️
+    <br>
+    Seni her zaman seveceğim.
+</footer>
 </body>
 </html>
 
