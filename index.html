@@ -125,6 +125,9 @@ setInterval(function(){
 
 }, 700);
 </script>
+<script>
+function surpriz(){document.getElementById('anilar').style.display='block';document.getElementById('devam').style.display='none';}
+</script>
 <body>
 
 <div class="card">
@@ -142,7 +145,7 @@ margin:20px 0;
 ">
 <p>Bu sayfa sadece senin için hazırlandı...</p>
 
-<button onclick="document.getElementById('mektup').style.display='block'">
+<button onclick="document.getElementById('mektup').style.display='block';document.getElementById('devam').style.display='block'">
 💌 Mektubu Aç
 </button>
 
@@ -156,13 +159,9 @@ Kalbimde başka kimse yok.<br><br>
 çünkü gerçekten seni hâlâ çok seviyorum. ❤️
 </p>
 
-</div>
-</div>
-</div>
-
-<button onclick="surpriz()">🎁 Bana Tıkla</button>
-  <h2>📸 Anılarımız</h2>
+<div id="devam" style="display:none;margin-top:20px;"><button onclick="surpriz()">🎁 Bana Tıkla</button></div>
 <div id="anilar" style="display:none;">
+<h2>📸 Anılarımız</h2>
 <div class="galeri">
     <img src="foto1.jpg" alt="Fotoğraf 1">
     <img src="foto2.jpg" alt="Fotoğraf 2">
@@ -175,4 +174,6 @@ Kalbimde başka kimse yok.<br><br>
 </footer>
 </body>
 </html>
+
+
 
