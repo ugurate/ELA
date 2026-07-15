@@ -125,8 +125,14 @@ setInterval(function(){
 
 }, 700);
 </script>
-<script>
-function surpriz(){document.getElementById('anilar').style.display='block';document.getElementById('devam').style.display='none';}
+  <script>
+function kalbeBas() {
+    document.body.innerHTML = `
+        <div style="display:flex;justify-content:center;align-items:center;height:100vh;background:#ffd6e7;">
+            <img src="pisman.jpg" style="max-width:90%;border-radius:20px;box-shadow:0 0 25px rgba(255,0,100,.4);">
+        </div>
+    `;
+}  
 </script>
 <body>
 
@@ -156,17 +162,9 @@ margin:20px 0;
 <p>
 Sadece seni seviyorum.<br><br>
 Kalbimde başka kimse yok.<br><br>
-çünkü gerçekten seni hâlâ çok seviyorum. ❤️
+ ❤️
 </p>
 
-<div id="devam" style="display:none;margin-top:20px;"><button onclick="surpriz()">🎁 Bana Tıkla</button></div>
-<div id="anilar" style="display:none;">
-<h2>📸 Anılarımız</h2>
-<div class="galeri">
-    <img src="foto1.jpg" alt="Fotoğraf 1">
-    <img src="foto2.jpg" alt="Fotoğraf 2">
-    <img src="foto3.jpg" alt="Fotoğraf 3">
-</div>
 <footer>
     ❤️ Sonsuza Kadar ❤️
     <br>
@@ -176,6 +174,11 @@ Kalbimde başka kimse yok.<br><br>
     <source src="AUD-20260715-WA0013.aac" type="audio/aac">
     Tarayıcınız ses dosyasını desteklemiyor.
 </audio>
+  <br><br>
+
+<button onclick="kalbeBas()" class="btn">
+    ❤️ Kalbe Bas ❤️
+</button>
 </body>
 </html>
 
