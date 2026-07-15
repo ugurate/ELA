@@ -127,11 +127,8 @@ setInterval(function(){
 </script>
   <script>
 function kalbeBas() {
-    document.getElementById("card").innerHTML = `
-        <div style="display:flex;justify-content:center;align-items:center;height:100vh;">
-            <img src="pisman.jpg" style="max-width:90%;border-radius:20px;box-shadow:0 0 25px rgba(255,0,100,.4);">
-        </div>
-    `;
+ document.querySelector(".card").innerHTML += `<div id="sonResim" style="margin-top:20px;"><img src="pisman.jpg" style="max-width:90%;border-radius:20px;box-shadow:0 0 25px rgba(255,0,100,.4);"></div>`;
+ document.querySelector("button.btn").style.display="none";
 }
 </script>
 <body>
@@ -179,8 +176,13 @@ Kalbimde başka kimse yok.<br><br>
 <button onclick="kalbeBas()" class="btn">
     ❤️ Kalbe Bas ❤️
 </button>
+</div>
 </body>
 </html>
+
+
+
+
 
 
 
